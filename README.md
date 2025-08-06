@@ -42,7 +42,7 @@ mini-linkedin/
 └── server/          # Node.js + Express Backend
 
 🚀 1. Clone the Repository
-git clone https://github.com/your-username/mini-linkedin.git
+git clone https://github.com/pritibishnoii/miniLinkedin
 cd mini-linkedin
 📦 2. Install Dependencies
 👉 Frontend (React)
