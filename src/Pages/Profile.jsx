@@ -9,7 +9,6 @@ const Profile = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
     const [activeTab, setActiveTab] = useState('posts');
-    const navigate = useNavigate();
 
     useEffect(() => {
         fetchProfile();

@@ -11,6 +11,7 @@ import Network from './Pages/Network';
 import Jobs from './Pages/Jobs';
 import Messaging from './Pages/Messaging';
 import Notifications from './Pages/Notifications';
+import ProtectedRoute from './components/ProtectedRoute';
 
 const App = () => {
     return (
@@ -22,12 +23,54 @@ const App = () => {
                     <Routes>
                         <Route path="/signup" element={<Signup />} />
                         <Route path="/login" element={<Login />} />
-                        <Route path="/" element={<Home />} />
-                        <Route path="/profile/:id" element={<Profile />} />
-                        <Route path="/network" element={<Network />} />
-                        <Route path="/jobs" element={<Jobs />} />
-                        <Route path="/messaging" element={<Messaging />} />
-                        <Route path="/notifications" element={<Notifications />} />
+                        <Route
+                            path="/"
+                            element={
+                                <ProtectedRoute>
+                                    <Home />
+                                </ProtectedRoute>
+                            }
+                        />
+                        <Route
+                            path="/profile/:id"
+                            element={
+                                <ProtectedRoute>
+                                    <Profile />
+                                </ProtectedRoute>
+                            }
+                        />
+                        <Route
+                            path="/network"
+                            element={
+                                <ProtectedRoute>
+                                    <Network />
+                                </ProtectedRoute>
+                            }
+                        />
+                        <Route
+                            path="/jobs"
+                            element={
+                                <ProtectedRoute>
+                                    <Jobs />
+                                </ProtectedRoute>
+                            }
+                        />
+                        <Route
+                            path="/messaging"
+                            element={
+                                <ProtectedRoute>
+                                    <Messaging />
+                                </ProtectedRoute>
+                            }
+                        />
+                        <Route
+                            path="/notifications"
+                            element={
+                                <ProtectedRoute>
+                                    <Notifications />
+                                </ProtectedRoute>
+                            }
+                        />
                     </Routes>
                 </div>
             </Router>
