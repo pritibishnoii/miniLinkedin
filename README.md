@@ -1,6 +1,6 @@
 Project Title: Mini LinkedIn Clone
 Live Link: https://mini-linkedin-lime.vercel.app
-<img width="1920" height="1080" alt="Screenshot (64)" src="https://github.com/user-attachments/assets/eb0f2e60-25b4-4c03-ac58-29f6e2147b11" />
+<img width="190" height="180" alt="Screenshot (64)" src="https://github.com/user-attachments/assets/eb0f2e60-25b4-4c03-ac58-29f6e2147b11" />
 Tech Stack Used:
 
 Frontend: React.js, Tailwind CSS
