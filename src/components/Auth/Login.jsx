@@ -22,8 +22,13 @@ const Login = () => {
         setError('');
         try {
             const data = await login(form.email, form.password);
+            localStorage.setItem('user', JSON.stringify(data.user));
+            localStorage.setItem('token', data.token);
             toast.success(`${data.message}`);
-            navigate(`/profile/${data.user._id}`);
+            // navigate(`/profile/${data.user._id}`);
+
+            // console.log(data);
+            navigate('/');
         } catch (err) {
             setError('Login failed. Please check your credentials.', err);
         } finally {
@@ -149,7 +154,7 @@ const Login = () => {
                     </div>
 
                     <a
-                        href="/"
+                        href="/signup"
                         className="w-full inline-flex justify-center items-center px-4 py-3 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 transition duration-200"
                     >
                         <svg className="h-5 w-5 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
